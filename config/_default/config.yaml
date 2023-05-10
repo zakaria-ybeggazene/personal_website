@@ -1,4 +1,5 @@
 baseURL: "http://zakaria-ybeggazene.github.io/"
+defaultContentLanguage: en
 languageCode: "en-us"
 title: "Zakaria YBEGGAZENE"
 theme: hugo-profile

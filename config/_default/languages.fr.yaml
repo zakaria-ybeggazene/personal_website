@@ -1,0 +1,144 @@
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Articles de blog
+params:
+  description: Ceci est le site personnel de Zakaria YBEGGAZENE. Vous y trouverez mon CV, mes expériences, mes projets, mes articles de blogs et mes papiers de recherche.
+  hero:
+    enable: true
+    intro: "Bonjour, je m'appelle"
+    title: "Zakaria."
+    subtitle: "Je construit de l'IA et des pipelines de données"
+    content: "A passionate data scientist/engineer. I use data science and big data technologies to build powerful, resilient, and secure data pipelines."
+    image: /images/zakaria_mountain.jpg
+    button:
+      enable: true
+      name: "CV"
+      url: "/assets/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/zakaria-ybeggazene
+        - icon: fab fa-github
+          url: https://github.com/zakaria-ybeggazene
+        - icon: fab fa-twitter
+          url: https://twitter.com/zakaria_ygz
+about:
+  enable: true
+  title: "A propos"
+  content: |-
+      I am a data scientist with a passion for Artificial Intelligence. I have a background in computer science and mathematics. I currently hold the position of a data scientist apprentice at [Dassault Systèmes SE](https://www.3ds.com/) in Vélizy-Villacoublay, France.
+
+      I am currently working on a project that will help developers correct their code bugs automatically with AI (Large Language Models).
+  skills:
+    enable: true
+    title: "Here are a few technologies I've been working with recently:"
+    items:
+      - "Python"
+      - "Tensorflow"
+      - "Keras"
+      - "PyTorch"
+      - "HuggingFace"
+      - "Google Cloud Platform"
+
+# Experience
+experience:
+  enable: true
+  title: "Expériences professionnelles"
+  items:
+    - job: "Data Scientist Apprentice"
+      company: "Dassault Systèmes SE"
+      companyUrl: "https://www.3ds.com/"
+      date: "August 2021 - present"
+      # featuredLink:
+      #   enable: true
+      #   name: "View the project"
+      #   url: "https://example.com"
+      content: | 
+        I am currently working on a R&D project that aims to help developers correct their code bugs automatically with AI (Large Language Models).
+        My missions are:
+        - State of the art study on automatic code correction (using Deep Learning approaches)
+        - Implementation of pipelines for massive data collection (Spark, HDFS, Hive ...)
+        - Data exploration, analysis and pre-processing (e.g. change of representation using abstract syntax trees ...)
+        - Development of machine learning models capable of proposing corrections (Seq2Seq, Graph Neural Networks, Transformers: GPT, BERT, T5 ...)
+        - Evaluation, comparison and characterization of the models through tests performed on real production data
+        - Integration of the models in our production DevOps chains (Web Service for IDE plugin)
+        - Communication and presentation of the results in an innovative way for the customers
+
+    - job: "Image Analysis and Statistical Support Intern"
+      company: "Enza Zaden France"
+      companyUrl: "https://www.enzazaden.com/fr"
+      date: "May 2021 - August 2021"
+      # featuredLink:
+      #   enable: true
+      #   url: "https://example.com"
+      info:
+        enable: true
+        content: 3 months internship (remote)
+      content: |
+        Enza Zaden is an international, multicultural vegetable seed breeding company that increasingly supports breeding with artificial intelligence (AI).
+        Internship's main missions:
+        - Image analysis by segmentation and creation of the statistical report in R.
+        - Application of ML algorithms on the information extracted for prediction.
+        - Optimization of execution times and deployment of the solution on the cloud (Azure).
+
+# Education
+education:
+  enable: true
+  title: "Formation"
+  index: false
+  items:
+    - title: "Master of Artificial Intelligence, Systems, Data (Apprenticeship track)"
+      school:
+        name: "University of Paris Dauphine - PSL, Paris"
+        url: "https://dauphine.psl.eu/en/training/masters-degrees/computer-science/m2-artificial-intelligence-systems-data"
+      date: "2022 - 2023"
+      content: |-
+        Extracurricular Activities
+          - Membership in the master's association "Association des étudiants du master IASD"
+          - Participation in tech events such as [VivaTechnology 2023](https://vivatechnology.com/)
+    - title: "Master of Data Science (Apprenticeship track)"
+      school:
+        name: "University of Paris Saclay, Orsay"
+        url: "https://www.universite-paris-saclay.fr/en/education/master/computer-science/m1-data-science-alternance"
+      date: "2021 - 2022"
+      # content: |-
+      #   I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
+      #   - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
+      #   - Face mask detection using a single convolutional neural network.
+
+      #   Extracurricular Activities
+      #     - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      #     - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+      # featuredLink:
+      #   enable: true
+      #   name: "My academic record"
+      #   url: "https://example.com"
+    - title: "Computer Science and Mathematics for Decision-Making and Data Bachelor's Year 3"
+      school:
+        name: "University of Paris Dauphine - PSL, Paris"
+        url: "https://dauphine.psl.eu/en/training/bachelors-degrees/bachelors-degree-in-organizational-computer-science/bachelors-year-3-decision-support-it-and-mathematics"
+      date: "2020 - 2021"
+    - title: "Preparatory Cycle in Computer Science (Bac +2)"
+      school:
+        name: "ESI (Ecole Nationale supérieure d'Informatique), Algiers"
+        url: "https://www.esi.dz/wp-content/uploads/2021/01/ESI_CPI_Programmes_Janvier_2012.pdf"
+      date: "2018 - 2020"
+
+#Contact
+contact:
+  enable: true
+  title: "Me contacter"
+  content: Ma boîte de réception est toujours ouverte. Si vous voulez me poser une question ou juste me dire bonjour, je ferai de mon mieux pour vous répondre!
+  email: zakariaybeggazene@gmail.com
+  btnName: E-mail
+  # formspree:
+  #   enable: true # `contact.email` value will be ignored
+  #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+  #   emailCaption: "Enter your email address"
+  #   messageCaption: "Enter your message here"
+
+weight: 2

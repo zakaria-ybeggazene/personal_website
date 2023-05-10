@@ -52,6 +52,20 @@
                 </svg>
             </button>
 
+            <li class="nav-item navbar-text dropdown">
+                <a class="nav-link dropdown-toggle" href="{{ .Site.BaseURL }}" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ .Site.Language.Lang }}
+                </a>
+                <div class="dropdown-menu shadow-lg rounded" aria-labelledby="navbarDropdown">
+                    {{ range $lang := .Site.Languages }}
+                    <a class="dropdown-item text-center nav-link" href="{{ $.Site.BaseURL }}{{ $lang }}">
+                        {{ $lang }}
+                    </a>
+                    {{ end }}
+                </div>
+            </li>
+
             <!-- navbar content -->
             <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
                 <ul class="navbar-nav {{ .Site.Params.navbar.align | default "ms-auto"}} text-center">
