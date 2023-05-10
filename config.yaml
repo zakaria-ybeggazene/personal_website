@@ -48,10 +48,10 @@ Menus:
     #   weight: 2
 
 params:
-  title: "Zakaria's website"
+  # title: "Zakaria's website"
   description: Personal website of Zakaria YBEGGAZENE, with resume, experiences, projects, blog posts and papers
   # staticPath: ""  # The path to serve the static files from
-  # favicon: "/fav.png"
+  favicon: "/icon.ico"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -96,8 +96,8 @@ params:
   # If you want to customize the menu, you can change it here
   navbar:
     align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-    brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-    brandName: "Zakaria's website" # Brand name for the brand | default is the title variable
+    brandLogo: "/images/logo.png" # Logo for the brand | default is the favicon variable
+    # brandName: "Zakaria's website" # Brand name for the brand | default is the title variable
     disableSearch: false
     menus:
       disableAbout: false
@@ -114,11 +114,11 @@ params:
     title: "Zakaria."
     subtitle: "I build AI and data pipelines"
     content: "A passionate data scientist/engineer. I use data science and big data technologies to build powerful, resilient, and secure data pipelines."
-    image: /me.jpg
+    image: /images/zakaria_mountain.jpg
     button:
       enable: true
       name: "Resume"
-      url: "/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
+      url: "/assets/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -137,7 +137,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    # image: "/me.jpg"
+    # image: "/zakaria_mountain.jpg"
     content: |-
       I am a data scientist with a passion for Artificial Intelligence. I have a background in computer science and mathematics. I currently hold the position of a data scientist apprentice at [Dassault Systèmes SE](https://www.3ds.com/) in Vélizy-Villacoublay, France.
 
