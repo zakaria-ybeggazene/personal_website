@@ -1,4 +1,4 @@
-baseURL: "https://zakaria-ybeggazene.github.io/personal_website/"
+baseURL: "http://zakaria-ybeggazene.github.io/"
 languageCode: "en-us"
 title: "Zakaria YBEGGAZENE"
 theme: hugo-profile
@@ -118,7 +118,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "/static/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
+      url: "/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -200,7 +200,7 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Artificial Intelligence, Systems, Data ()"
+      - title: "Master of Artificial Intelligence, Systems, Data (Apprenticeship track)"
         school:
           name: "University of Paris Dauphine - PSL, Paris"
           url: "https://dauphine.psl.eu/en/training/masters-degrees/computer-science/m2-artificial-intelligence-systems-data"
@@ -209,7 +209,7 @@ params:
           Extracurricular Activities
             - Membership in the master's association "Association des étudiants du master IASD"
             - Participation in tech events such as [VivaTechnology 2023](https://vivatechnology.com/)
-      - title: "Master of Data Science"
+      - title: "Master of Data Science (Apprenticeship track)"
         school:
           name: "University of Paris Saclay, Orsay"
           url: "https://www.universite-paris-saclay.fr/en/education/master/computer-science/m1-data-science-alternance"
@@ -226,7 +226,7 @@ params:
         #   enable: true
         #   name: "My academic record"
         #   url: "https://example.com"
-      - title: "Computer Science and Mathematics for Decision-Making and Data Bachelor's Year 3, Paris"
+      - title: "Computer Science and Mathematics for Decision-Making and Data Bachelor's Year 3"
         school:
           name: "University of Paris Dauphine - PSL, Paris"
           url: "https://dauphine.psl.eu/en/training/bachelors-degrees/bachelors-degree-in-organizational-computer-science/bachelors-year-3-decision-support-it-and-mathematics"

@@ -7,9 +7,4 @@ tags: ["data", "ai", "data science", "data engineer"]
 draft: false
 ---
 
-## Introduction
-
-This is **bold** text, and this is *emphasized* text.
-
 Welcome to my personal website.
-
