@@ -119,7 +119,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "/assets/ZAKARIA_YBEGGAZENE_CV_CDI_DATA.pdf"
+      url: "/assets/ZAKARIA_YBEGGAZENE_RESUME_DATA.pdf"
       download: true
       newPage: false
     socialLinks:
