@@ -33,7 +33,7 @@ Write Markdown, put images in the same folder, set `draft: false`, then
 |---|---|
 | Build command | `hugo --gc --minify` |
 | Build output directory | `public` |
-| Environment variable | `HUGO_VERSION` = a recent extended version (e.g. `0.148.0`) |
+| Environment variable | `HUGO_VERSION` = a recent extended version (e.g. `0.163.1`) |
 
 Submodules are cloned automatically by Cloudflare Pages. No Go toolchain is
 required (the theme is vendored as a submodule, not a Hugo Module).
