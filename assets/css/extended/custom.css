@@ -1,0 +1,25 @@
+/* Custom styles layered on top of PaperMod (auto-loaded from assets/css/extended/). */
+
+/* Résumé / booking call-to-action button used in content pages */
+.resume-download {
+    display: inline-block;
+    margin: 0.4rem 0 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: var(--theme);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.resume-download:hover {
+    opacity: 0.85;
+}
+
+/* Keep RTL (Arabic) content comfortable */
+[dir="rtl"] .post-content ul,
+[dir="rtl"] .post-content ol {
+    padding-right: 1.2rem;
+    padding-left: 0;
+}

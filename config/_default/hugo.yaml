@@ -1,0 +1,234 @@
+# Hugo configuration — PaperMod theme, multilingual (EN / FR / AR)
+# Deployed on Cloudflare Pages. See README.md for build settings.
+baseURL: "https://zakaria.ybeggazene.com/"
+title: "Zakaria Ybeggazene"
+theme: "PaperMod"
+
+defaultContentLanguage: "en"
+defaultContentLanguageInSubdir: false
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+
+pagination:
+  pagerSize: 5
+
+# Allow raw HTML in Markdown (Cal.com / Stripe embeds, resume formatting)
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+
+# JSON output on the homepage powers PaperMod's Fuse.js search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+minify:
+  disableXML: true
+
+# ---- Parameters shared by all languages ----
+params:
+  env: production
+  author: "Zakaria Ybeggazene"
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  displayFullLangName: true
+  ShowLanguageSwitcher: true
+  comments: false
+
+  assets:
+    favicon: "/icon.ico"
+    favicon16x16: "/icon.ico"
+    favicon32x32: "/icon.ico"
+    apple_touch_icon: "/icon.ico"
+
+  # Social icons appear under the profile and in the footer
+  socialIcons:
+    - name: linkedin
+      url: "https://linkedin.com/in/zakaria-ybeggazene"
+    - name: github
+      url: "https://github.com/zakaria-ybeggazene"
+    - name: x
+      url: "https://twitter.com/zakaria_ygz"
+    - name: email
+      url: "mailto:zakariaybeggazene@gmail.com"
+    - name: rss
+      url: "/index.xml"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# ---- Languages ----
+languages:
+  en:
+    languageName: "English"
+    languageCode: "en-us"
+    weight: 1
+    title: "Zakaria Ybeggazene"
+    params:
+      description: "Personal website of Zakaria Ybeggazene — data scientist & AI engineer. Résumé, certifications and blog."
+      homeInfoParams:
+        Title: "Hi, I'm Zakaria 👋"
+        Content: >
+          Data scientist & AI engineer. I use data science and big-data
+          technologies to build powerful, resilient pipelines and AI systems.
+          Browse my blog, read my résumé, or get in touch.
+      profileMode:
+        enabled: true
+        title: "Zakaria Ybeggazene"
+        subtitle: "Data scientist & AI engineer — building AI and data pipelines."
+        imageUrl: "/images/zakaria_mountain.jpg"
+        imageTitle: "Zakaria Ybeggazene"
+        imageWidth: 160
+        imageHeight: 160
+        buttons:
+          - name: Blog
+            url: blog
+          - name: Résumé
+            url: resume
+          - name: Certifications
+            url: certifications
+          - name: Contact
+            url: contact
+    menus:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /blog/
+          weight: 10
+        - identifier: resume
+          name: Résumé
+          url: /resume/
+          weight: 20
+        - identifier: certifications
+          name: Certifications
+          url: /certifications/
+          weight: 30
+        - identifier: contact
+          name: Contact
+          url: /contact/
+          weight: 40
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 50
+
+  fr:
+    languageName: "Français"
+    languageCode: "fr-fr"
+    weight: 2
+    title: "Zakaria Ybeggazene"
+    params:
+      description: "Site personnel de Zakaria Ybeggazene — data scientist & ingénieur IA. CV, certifications et blog."
+      profileMode:
+        enabled: true
+        title: "Zakaria Ybeggazene"
+        subtitle: "Data scientist & ingénieur IA — je construis de l'IA et des pipelines de données."
+        imageUrl: "/images/zakaria_mountain.jpg"
+        imageTitle: "Zakaria Ybeggazene"
+        imageWidth: 160
+        imageHeight: 160
+        buttons:
+          - name: Blog
+            url: blog
+          - name: CV
+            url: resume
+          - name: Certifications
+            url: certifications
+          - name: Contact
+            url: contact
+    menus:
+      main:
+        - identifier: blog
+          name: Blog
+          url: /fr/blog/
+          weight: 10
+        - identifier: resume
+          name: CV
+          url: /fr/resume/
+          weight: 20
+        - identifier: certifications
+          name: Certifications
+          url: /fr/certifications/
+          weight: 30
+        - identifier: contact
+          name: Contact
+          url: /fr/contact/
+          weight: 40
+        - identifier: search
+          name: Recherche
+          url: /fr/search/
+          weight: 50
+
+  ar:
+    languageName: "العربية"
+    languageCode: "ar"
+    languageDirection: rtl
+    weight: 3
+    title: "زكرياء إبڨازن"
+    params:
+      description: "الموقع الشخصي لزكرياء إبڨازن — عالم بيانات ومهندس ذكاء اصطناعي. السيرة الذاتية، الشهادات والمدونة."
+      profileMode:
+        enabled: true
+        title: "زكرياء إبڨازن"
+        subtitle: "عالم بيانات ومهندس ذكاء اصطناعي — أبني أنظمة ذكاء اصطناعي وخطوط معالجة بيانات."
+        imageUrl: "/images/zakaria_mountain.jpg"
+        imageTitle: "زكرياء إبڨازن"
+        imageWidth: 160
+        imageHeight: 160
+        buttons:
+          - name: المدونة
+            url: blog
+          - name: السيرة الذاتية
+            url: resume
+          - name: الشهادات
+            url: certifications
+          - name: تواصل
+            url: contact
+    menus:
+      main:
+        - identifier: blog
+          name: المدونة
+          url: /ar/blog/
+          weight: 10
+        - identifier: resume
+          name: السيرة الذاتية
+          url: /ar/resume/
+          weight: 20
+        - identifier: certifications
+          name: الشهادات
+          url: /ar/certifications/
+          weight: 30
+        - identifier: contact
+          name: تواصل
+          url: /ar/contact/
+          weight: 40
+        - identifier: search
+          name: بحث
+          url: /ar/search/
+          weight: 50
