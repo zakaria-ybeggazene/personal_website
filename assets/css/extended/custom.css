@@ -23,3 +23,71 @@
     padding-right: 1.2rem;
     padding-left: 0;
 }
+
+/* ---- Share section: add a clear, localized label before the icons ---- */
+.post-footer .share-buttons {
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+}
+
+.post-footer .share-buttons::before {
+    content: "Share this post:";
+    margin-inline-end: 0.4rem;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+html[lang^="fr"] .post-footer .share-buttons::before {
+    content: "Partager cet article :";
+}
+
+html[lang^="ar"] .post-footer .share-buttons::before {
+    content: "شارك هذا المقال:";
+}
+
+/* ---- "Not yet translated" notice shown above fallback English content ---- */
+.translation-notice {
+    margin: 1rem 0 1.5rem;
+    padding: 0.7rem 1rem;
+    border-inline-start: 3px solid var(--primary);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
+/* ---- Public view-count badge (GoatCounter) ---- */
+.post-views {
+    margin-top: 1rem;
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+/* ---- "EN" badge on untranslated posts in the blog list ---- */
+/* Title + badge are grouped in .entry-title-wrap so the badge stays next to
+   the title rather than being pushed away by the parent's space-between. */
+.entry-title-wrap {
+    display: inline;
+}
+
+.lang-badge {
+    display: inline-block;
+    padding: 0.1rem 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    color: var(--secondary);
+    font-size: 0.62rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    /* baseline keeps it tidy on wrapped multi-line titles (FR/AR) */
+    vertical-align: baseline;
+    position: relative;
+    top: -0.15em;
+}

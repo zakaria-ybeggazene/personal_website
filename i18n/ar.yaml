@@ -1,0 +1,28 @@
+- id: untranslated_notice
+  translation: "لم تُترجم هذه المقالة إلى هذه اللغة بعد — هذه هي النسخة الإنجليزية الأصلية."
+
+- id: untranslated_badge
+  translation: "متاح بالإنجليزية فقط"
+
+- id: views_label
+  translation: "المشاهدات"
+
+# Override theme's Arabic plurals: number before the unit, and add the
+# missing `many` (11–99) form and the `words` key entirely.
+- id: read_time
+  translation:
+    zero: "0 دقيقة"
+    one: "دقيقة واحدة"
+    two: "دقيقتان"
+    few: "{{ .Count }} دقائق"
+    many: "{{ .Count }} دقيقة"
+    other: "{{ .Count }} دقيقة"
+
+- id: words
+  translation:
+    zero: "0 كلمة"
+    one: "كلمة واحدة"
+    two: "كلمتان"
+    few: "{{ .Count }} كلمات"
+    many: "{{ .Count }} كلمة"
+    other: "{{ .Count }} كلمة"

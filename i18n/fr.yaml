@@ -1,0 +1,8 @@
+- id: untranslated_notice
+  translation: "Cet article n'a pas encore été traduit dans cette langue — voici la version anglaise originale."
+
+- id: untranslated_badge
+  translation: "Disponible uniquement en anglais"
+
+- id: views_label
+  translation: "Vues"

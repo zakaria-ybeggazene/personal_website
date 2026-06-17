@@ -1,0 +1,19 @@
+{{/* Optional public view-count badge, powered by GoatCounter.
+     Renders only on single posts and only when params.goatcounterCode is set. */}}
+{{- if and (eq .Kind "page") site.Params.goatcounterCode }}
+<div class="post-views" title="{{ i18n "views_label" | default "Views" }}">
+  👁 <span id="gc-views">…</span>
+  <script>
+    (function () {
+      var code = "{{ site.Params.goatcounterCode }}";
+      var path = "{{ .RelPermalink }}";
+      var url = "https://" + code + ".goatcounter.com/counter/" + encodeURIComponent(path) + ".json";
+      fetch(url).then(function (r) { return r.json(); }).then(function (d) {
+        document.getElementById("gc-views").textContent = d.count_unique || d.count || "0";
+      }).catch(function () {
+        var e = document.getElementById("gc-views"); if (e) e.textContent = "—";
+      });
+    })();
+  </script>
+</div>
+{{- end }}

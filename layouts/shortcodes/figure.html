@@ -1,0 +1,37 @@
+{{- /*
+  Override of Hugo's internal figure shortcode.
+  Resolves `src` against the page's bundle resources and emits an absolute
+  URL (RelPermalink). This keeps images working when a post's English content
+  is rendered as a fallback on the French/Arabic URLs (the image files are only
+  published under the English bundle path). External URLs are left untouched.
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- with .Page.Resources.GetMatch $src }}{{ $src = .RelPermalink }}{{ end -}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ with .Get "id" }} id="{{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end -}}
+    <img loading="lazy" src="{{ $src }}"
+         {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
+         {{- end -}}
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    /> {{- /* Closing img tag */ -}}
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{- with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- with .Get "attrlink" }}</a>{{ end -}}
+            </p>{{- end }}
+        </figcaption>
+    {{- end -}}
+</figure>

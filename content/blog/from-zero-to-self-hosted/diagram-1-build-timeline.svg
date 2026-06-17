@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" role="img" aria-label="Build timeline from WSL2 foundation to current state" width="980" height="360"><rect data-bg="1" x="0" y="0" width="980" height="360" rx="14" fill="#0f1115"/>
+        <defs>
+          <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#5b8cff"/>
+          </marker>
+        </defs>
+        <!-- spine -->
+        <line x1="60" y1="40" x2="60" y2="320" stroke="#2a2f3d" stroke-width="2"/>
+        <!-- nodes -->
+        <!-- helper: dot + label -->
+        <!-- 1 -->
+        <circle cx="60" cy="40" r="7" fill="#5b8cff"/>
+        <text x="82" y="36" fill="#e6e9ef" font-size="15" font-weight="700">1 · Foundation</text>
+        <text x="82" y="54" fill="#9aa3b2" font-size="12.5">WSL2 Ubuntu 24.04 (NAT mode) · Docker Engine, native, not Docker Desktop</text>
+        <!-- 2 -->
+        <circle cx="60" cy="86" r="7" fill="#5b8cff"/>
+        <text x="82" y="82" fill="#e6e9ef" font-size="15" font-weight="700">2 · Version control</text>
+        <text x="82" y="100" fill="#9aa3b2" font-size="12.5">Git + GitHub CLI · private <tspan font-style="italic">homelab</tspan> repo · reproducible from day one</text>
+        <!-- 3 -->
+        <circle cx="60" cy="132" r="7" fill="#22d3a6"/>
+        <text x="82" y="128" fill="#e6e9ef" font-size="15" font-weight="700">3 · The front door</text>
+        <text x="82" y="146" fill="#9aa3b2" font-size="12.5">Traefik v3 · one wildcard TLS cert · <tspan fill="#cdd6f4">proxy</tspan> network · ddns-updater</text>
+        <!-- 4 -->
+        <circle cx="60" cy="178" r="7" fill="#a78bfa"/>
+        <text x="82" y="174" fill="#e6e9ef" font-size="15" font-weight="700">4 · The private path</text>
+        <text x="82" y="192" fill="#9aa3b2" font-size="12.5">WireGuard VPN (wg-easy → native on Windows for UDP)</text>
+        <!-- 5 -->
+        <circle cx="60" cy="224" r="7" fill="#f87171"/>
+        <text x="82" y="220" fill="#e6e9ef" font-size="15" font-weight="700">5 · Defenses</text>
+        <text x="82" y="238" fill="#9aa3b2" font-size="12.5">CrowdSec · Watchtower · website · hardening before going public</text>
+        <!-- 6 -->
+        <circle cx="60" cy="270" r="7" fill="#f6821f"/>
+        <text x="82" y="266" fill="#e6e9ef" font-size="15" font-weight="700">6 · True isolation</text>
+        <text x="82" y="284" fill="#9aa3b2" font-size="12.5">internal entrypoint :8443 · CoreDNS split DNS · Actual Budget</text>
+        <!-- 7 -->
+        <circle cx="60" cy="316" r="7" fill="#fbbf24"/>
+        <text x="82" y="312" fill="#e6e9ef" font-size="15" font-weight="700">7 · Now</text>
+        <text x="82" y="330" fill="#9aa3b2" font-size="12.5">Stirling PDF (VPN-only) · www redirect · Ghost public blog (you're here)</text>
+      </svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 250" role="img" aria-label="Traefik middleware chains by service type" width="980" height="250"><rect data-bg="1" x="0" y="0" width="980" height="250" rx="14" fill="#0f1115"/>
+        <g font-size="11.5">
+          <!-- public-chain -->
+          <text x="20" y="30" fill="#f6821f" font-size="13" font-weight="700">public-chain · Ghost blog (:443)</text>
+          <g text-anchor="middle">
+            <rect x="20" y="42" width="125" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="82" y="63" fill="#e6e9ef">secure-headers</text>
+            <rect x="160" y="42" width="135" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="227" y="63" fill="#e6e9ef">rate-limit 20/s</text>
+            <rect x="310" y="42" width="140" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="380" y="63" fill="#e6e9ef">body-limit 10MB</text>
+            <rect x="465" y="42" width="150" height="34" rx="7" fill="#2a1f10" stroke="#f6821f"/><text x="540" y="63" fill="#f6821f">CrowdSec bouncer</text>
+          </g>
+          <!-- admin-chain -->
+          <text x="20" y="110" fill="#fbbf24" font-size="13" font-weight="700">admin-chain · Ghost /ghost (:443)</text>
+          <g text-anchor="middle">
+            <rect x="20" y="122" width="125" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="82" y="143" fill="#e6e9ef">secure-headers</text>
+            <rect x="160" y="122" width="160" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="240" y="143" fill="#e6e9ef">admin-rate-limit 5/s</text>
+            <rect x="335" y="122" width="140" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="405" y="143" fill="#e6e9ef">body-limit 10MB</text>
+          </g>
+          <!-- vpn-chain -->
+          <text x="20" y="190" fill="#a78bfa" font-size="13" font-weight="700">vpn-chain · Actual Budget (:8443)</text>
+          <g text-anchor="middle">
+            <rect x="20" y="202" width="125" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="82" y="223" fill="#e6e9ef">secure-headers</text>
+            <rect x="160" y="202" width="140" height="34" rx="7" fill="#1c2030" stroke="#2a2f3d"/><text x="230" y="223" fill="#e6e9ef">body-limit 10MB</text>
+            <rect x="315" y="202" width="200" height="34" rx="7" fill="#241a3a" stroke="#a78bfa" stroke-dasharray="4 3"/><text x="415" y="223" fill="#a78bfa">no rate-limit (VPN-gated)</text>
+          </g>
+          <!-- vpn-pdf note -->
+          <text x="650" y="190" fill="#22d3a6" font-size="13" font-weight="700">vpn-pdf-chain</text>
+          <text x="650" y="210" fill="#9aa3b2" font-size="11.5">= vpn-chain but</text>
+          <text x="650" y="226" fill="#9aa3b2" font-size="11.5">body-limit <tspan fill="#22d3a6">100MB</tspan> (Stirling)</text>
+        </g>
+      </svg>
