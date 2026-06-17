@@ -1,17 +1,13 @@
 ---
-title: "Certifications & Réalisations"
-description: "Certifications, prix et réalisations de Zakaria Ybeggazene."
+title: "Certifications & Formations"
+description: "Certifications et formations de Zakaria Ybeggazene."
 hidemeta: true
 ---
 
-## Certifications
+## Certifications & Formations
 
-- **Nom de la certification** — *Organisme émetteur* · Année — [vérifier](https://example.com)
-- **Nom de la certification** — *Organisme émetteur* · Année
-
-## Réalisations
-
-- **Titre de la réalisation** — courte description.
-
-> _Cette page est un point de départ — remplacez les exemples ci-dessus par vos
-> vraies certifications et réalisations._
+- **Professional Data Engineer (préparation)** — *Google Cloud · Coursera*
+- **Machine Learning** — *Université de Stanford · Coursera*
+- **Deep Learning Specialization** — *DeepLearning.AI · Coursera*
+- **Certified Network Security Specialist** — *International CyberSecurity Institute*
+- **Réseaux Cisco** — *ICT Towers (Cisco Learning Partner)*

@@ -1,23 +1,13 @@
 ---
 title: "Certifications & Achievements"
-description: "Certifications, awards and achievements of Zakaria Ybeggazene."
+description: "Certifications and training of Zakaria Ybeggazene."
 hidemeta: true
 ---
 
-<!--
-  Add an entry per certification/achievement below. Keep the same format.
-  To show a badge image, drop it in static/images/ and reference it:
-  ![](/images/my-badge.png)
--->
+## Certifications & Training
 
-## Certifications
-
-- **Certification name** — *Issuing organization* · Year — [verify](https://example.com)
-- **Certification name** — *Issuing organization* · Year
-
-## Achievements
-
-- **Achievement title** — short description.
-
-> _This page is a starting point — replace the placeholders above with your real
-> certifications and achievements._
+- **Professional Data Engineer (preparation)** — *Google Cloud · Coursera*
+- **Machine Learning** — *Stanford University · Coursera*
+- **Deep Learning Specialization** — *DeepLearning.AI · Coursera*
+- **Certified Network Security Specialist** — *International CyberSecurity Institute*
+- **Cisco Networking** — *ICT Towers (Cisco Learning Partner)*

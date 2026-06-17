@@ -102,7 +102,7 @@ languages:
         enabled: true
         title: "Zakaria Ybeggazene"
         subtitle: "Data scientist & AI engineer — building AI and data pipelines."
-        imageUrl: "images/zakaria_mountain.jpg"
+        imageUrl: "images/zakaria.jpg"
         imageTitle: "Zakaria Ybeggazene"
         imageWidth: 160
         imageHeight: 160
@@ -149,7 +149,7 @@ languages:
         enabled: true
         title: "Zakaria Ybeggazene"
         subtitle: "Data scientist & ingénieur IA — je construis de l'IA et des pipelines de données."
-        imageUrl: "images/zakaria_mountain.jpg"
+        imageUrl: "images/zakaria.jpg"
         imageTitle: "Zakaria Ybeggazene"
         imageWidth: 160
         imageHeight: 160
@@ -197,7 +197,7 @@ languages:
         enabled: true
         title: "زكرياء إبڨازن"
         subtitle: "عالم بيانات ومهندس ذكاء اصطناعي — أبني أنظمة ذكاء اصطناعي وخطوط معالجة بيانات."
-        imageUrl: "images/zakaria_mountain.jpg"
+        imageUrl: "images/zakaria.jpg"
         imageTitle: "زكرياء إبڨازن"
         imageWidth: 160
         imageHeight: 160

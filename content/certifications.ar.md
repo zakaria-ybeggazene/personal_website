@@ -1,16 +1,13 @@
 ---
-title: "الشهادات والإنجازات"
-description: "شهادات وجوائز وإنجازات زكرياء إبڨازن."
+title: "الشهادات والتكوينات"
+description: "شهادات وتكوينات زكرياء إبڨازن."
 hidemeta: true
 ---
 
-## الشهادات
+## الشهادات والتكوينات
 
-- **اسم الشهادة** — *الجهة المانحة* · السنة — [تحقّق](https://example.com)
-- **اسم الشهادة** — *الجهة المانحة* · السنة
-
-## الإنجازات
-
-- **عنوان الإنجاز** — وصف قصير.
-
-> _هذه الصفحة نقطة بداية — استبدل الأمثلة أعلاه بشهاداتك وإنجازاتك الحقيقية._
+- **Professional Data Engineer (تحضير)** — *Google Cloud · Coursera*
+- **Machine Learning** — *جامعة ستانفورد · Coursera*
+- **Deep Learning Specialization** — *DeepLearning.AI · Coursera*
+- **Certified Network Security Specialist** — *International CyberSecurity Institute*
+- **شبكات Cisco** — *ICT Towers (شريك Cisco للتعلّم)*
