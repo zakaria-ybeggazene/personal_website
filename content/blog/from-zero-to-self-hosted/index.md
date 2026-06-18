@@ -6,6 +6,11 @@ tags: ["homelab", "self-hosting", "docker", "traefik", "wireguard", "security", 
 summary: "How I built a private, cloud-native home server on Windows 11 + WSL2 (Docker, Traefik, WireGuard, split DNS) and the bugs that taught me the most."
 ShowToc: true
 TocOpen: false
+cover:
+  image: "screenshot-stack-healthy.png"
+  alt: "Terminal showing every homelab Docker service up and healthy"
+  caption: "`docker ps` — the full stack running: Traefik, CrowdSec, WireGuard, Watchtower and more."
+  relative: true
 ---
 
 > 📦 The full sanitized setup (architecture, Compose files, and every config) is on GitHub: **[zakaria-ybeggazene/homelab-template](https://github.com/zakaria-ybeggazene/homelab-template)**.

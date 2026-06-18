@@ -1,0 +1,17 @@
+# Security headers for Cloudflare Pages.
+# Applied to every response; verify at https://securityheaders.com after deploy.
+/*
+  # Force HTTPS for 2 years and allow preload-list submission.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # Stop browsers from MIME-sniffing a response away from its declared type.
+  X-Content-Type-Options: nosniff
+  # Don't leak full URLs to other origins; send origin only on cross-origin.
+  Referrer-Policy: strict-origin-when-cross-origin
+  # Disallow this site being framed elsewhere (clickjacking).
+  X-Frame-Options: DENY
+  # Opt out of powerful APIs this static site never uses.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  # Content Security Policy. 'unsafe-inline' is required by PaperMod's inline
+  # theme-switch script and styles. Sources cover analytics + the social embeds
+  # allowed in markdown (Cal.com / Stripe). Tighten if you drop those.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com https://gc.zgo.at https://*.goatcounter.com https://app.cal.com https://js.stripe.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://*.goatcounter.com; frame-src https://app.cal.com https://js.stripe.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'
