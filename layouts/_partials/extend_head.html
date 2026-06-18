@@ -4,6 +4,54 @@
 <link rel="icon" href="{{ "favicon.ico" | absURL }}" sizes="any">
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
 <link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
+<link rel="author" href="{{ "humans.txt" | absURL }}">
+
+{{/* og:locale:alternate — the locales THIS page is also available in. PaperMod
+     emits og:locale but no alternates; derived from the same languageCode source
+     (replace "-" "_") so main + alternate tags stay consistent. */}}
+{{- range .Translations }}
+{{- with .Language.Locale }}<meta property="og:locale:alternate" content="{{ replace . "-" "_" }}">{{ end }}
+{{- end }}
+
+{{/* hreflang x-default — points unmatched locales at the default-language
+     version of THIS page. PaperMod already emits the per-language alternates. */}}
+{{- $defLang := (index hugo.Sites 0).Language.Lang }}
+{{- range .AllTranslations }}
+{{- if eq .Lang $defLang }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">{{ end }}
+{{- end }}
+
+{{/* Rich Person JSON-LD on the homepage — establishes the site owner as a
+     search entity (knowledge graph). Complements PaperMod's schema_json.html. */}}
+{{- if .IsHome }}
+{{- $img := resources.Get "images/zakaria.jpg" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{ site.Home.Permalink }}#person",
+  "name": "Zakaria Ybeggazene",
+  "url": "{{ site.Home.Permalink }}",
+  {{- with $img }}
+  "image": "{{ .Permalink }}",
+  {{- end }}
+  "jobTitle": "AI Engineer",
+  "description": "Data scientist and AI engineer building production AI systems, LLM and agentic platforms, and large-scale data pipelines.",
+  "worksFor": { "@type": "Organization", "name": "Dassault Systèmes", "url": "https://www.3ds.com/" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Université Paris Dauphine – PSL", "url": "https://dauphine.psl.eu/en" },
+    { "@type": "CollegeOrUniversity", "name": "Université Paris-Saclay", "url": "https://www.universite-paris-saclay.fr/en" },
+    { "@type": "CollegeOrUniversity", "name": "École Nationale Supérieure d'Informatique (ESI)", "url": "https://www.esi.dz/" }
+  ],
+  "knowsAbout": ["Artificial Intelligence", "Large Language Models", "Agentic systems", "Data Science", "Machine Learning", "Deep Learning", "Big Data", "Apache Spark", "Python", "FastAPI"],
+  "knowsLanguage": ["French", "English", "Arabic", "Berber"],
+  {{- $socials := slice }}
+  {{- range site.Params.socialIcons }}
+    {{- if in (slice "linkedin" "github" "x" "twitter") .name }}{{ $socials = $socials | append .url }}{{ end }}
+  {{- end }}
+  "sameAs": {{ $socials | jsonify }}
+}
+</script>
+{{- end }}
 
 {{/* Analytics — all opt-in via site params so nothing is hardcoded in git.
      See README.md ("Analytics") for setup. */}}

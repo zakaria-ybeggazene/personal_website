@@ -1,0 +1,6 @@
+# Security contact for {{ site.Title }} — see https://securitytxt.org
+# Generated at build time; Expires is re-stamped to build date + 1 year.
+Contact: mailto:zakariaybeggazene@gmail.com
+Expires: {{ (now.UTC.AddDate 1 0 0).Format "2006-01-02T15:04:05Z" }}
+Preferred-Languages: en, fr, ar
+Canonical: {{ "/.well-known/security.txt" | absURL }}

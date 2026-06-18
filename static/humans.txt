@@ -1,0 +1,13 @@
+/* TEAM */
+Name: Zakaria Ybeggazene
+Role: Data scientist & AI engineer
+Contact: zakariaybeggazene [at] gmail.com
+LinkedIn: linkedin.com/in/zakaria-ybeggazene
+GitHub: github.com/zakaria-ybeggazene
+X: twitter.com/zakaria_ygz
+
+/* SITE */
+Last update: 2026/06/18
+Language: English / Français / العربية
+Standards: HTML5, CSS3
+Software: Hugo, PaperMod, Cloudflare Pages

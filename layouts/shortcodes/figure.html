@@ -6,7 +6,16 @@
   published under the English bundle path). External URLs are left untouched.
 */ -}}
 {{- $src := .Get "src" -}}
-{{- with .Page.Resources.GetMatch $src }}{{ $src = .RelPermalink }}{{ end -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- with .Page.Resources.GetMatch $src -}}
+    {{- $src = .RelPermalink -}}
+    {{- /* Stamp intrinsic dimensions on raster images so they reserve space and
+           don't shift layout (CLS). SVGs expose no usable .Width, so skip them. */ -}}
+    {{- if and (not $width) (in (slice "png" "jpg" "jpeg" "gif" "webp") .MediaType.SubType) -}}
+        {{- $width = string .Width -}}{{- $height = string .Height -}}
+    {{- end -}}
+{{- end -}}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ with .Get "id" }} id="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
@@ -15,8 +24,8 @@
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
          {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+         {{- with $width }} width="{{ . }}"{{ end -}}
+         {{- with $height }} height="{{ . }}"{{ end -}}
     /> {{- /* Closing img tag */ -}}
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}

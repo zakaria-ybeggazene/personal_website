@@ -66,6 +66,12 @@ html[lang^="ar"] .post-footer .share-buttons::before {
     font-size: 0.9rem;
 }
 
+/* Pair with the theme's `img { max-width: 100% }`: now that figures carry
+   explicit width/height (for CLS), this keeps them scaling without distortion. */
+img {
+    height: auto;
+}
+
 /* ---- "Discuss on social" CTA at the foot of each post ---- */
 .post-discuss {
     margin-top: 1.5rem;

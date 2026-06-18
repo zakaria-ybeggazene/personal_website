@@ -64,7 +64,7 @@
 {{- end }}
 
 {{/* When this post is not translated, use the English version for meta. */}}
-{{- $defaultLang := (index site.Languages 0).Lang }}
+{{- $defaultLang := (index hugo.Sites 0).Language.Lang }}
 {{- $meta := . }}
 {{- $isFallback := false }}
 {{- $translated := .Param "translated" | default true }}
