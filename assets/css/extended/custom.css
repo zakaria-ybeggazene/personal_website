@@ -66,6 +66,19 @@ html[lang^="ar"] .post-footer .share-buttons::before {
     font-size: 0.9rem;
 }
 
+/* ---- "Discuss on social" CTA at the foot of each post ---- */
+.post-discuss {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
+.post-discuss a {
+    font-weight: 600;
+}
+
 /* ---- "EN" badge on untranslated posts in the blog list ---- */
 /* Title + badge are grouped in .entry-title-wrap so the badge stays next to
    the title rather than being pushed away by the parent's space-between. */

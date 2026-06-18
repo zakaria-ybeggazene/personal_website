@@ -6,3 +6,12 @@
 
 - id: views_label
   translation: "Vues"
+
+- id: discuss_prompt
+  translation: "Un avis sur cet article ? Discutons-en —"
+
+- id: discuss_email
+  translation: "e-mail"
+
+- id: discuss_or
+  translation: "ou"

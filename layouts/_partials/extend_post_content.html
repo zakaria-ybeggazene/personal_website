@@ -1,3 +1,22 @@
+{{/* "Discuss on social" CTA — there is no on-site comment system, so each post
+     invites the conversation onto the platforms the audience already uses.
+     Links come from params.socialIcons so they stay defined in one place. */}}
+{{- if eq .Kind "page" }}
+{{- $li := "" }}{{- $x := "" }}{{- $mail := "" }}
+{{- range site.Params.socialIcons }}
+  {{- if eq .name "linkedin" }}{{ $li = .url }}{{ end }}
+  {{- if or (eq .name "x") (eq .name "twitter") }}{{ $x = .url }}{{ end }}
+  {{- if eq .name "email" }}{{ $mail = .url }}{{ end }}
+{{- end }}
+{{- $links := slice }}
+{{- with $li }}{{ $links = $links | append (printf "<a href=%q target=\"_blank\" rel=\"noopener me\">LinkedIn</a>" .) }}{{ end }}
+{{- with $x }}{{ $links = $links | append (printf "<a href=%q target=\"_blank\" rel=\"noopener me\">X</a>" .) }}{{ end }}
+{{- with $mail }}{{ $links = $links | append (printf "<a href=%q rel=\"me\">%s</a>" . (i18n "discuss_email")) }}{{ end }}
+{{- if $links }}
+<p class="post-discuss">{{ i18n "discuss_prompt" }} {{ delimit $links ", " (printf " %s " (i18n "discuss_or")) | safeHTML }}.</p>
+{{- end }}
+{{- end }}
+
 {{/* Optional public view-count badge, powered by GoatCounter.
      Renders only on single posts and only when params.goatcounterCode is set. */}}
 {{- if and (eq .Kind "page") site.Params.goatcounterCode }}

@@ -7,6 +7,15 @@
 - id: views_label
   translation: "المشاهدات"
 
+- id: discuss_prompt
+  translation: "هل لديك رأي حول هذا المقال؟ لنتحدث —"
+
+- id: discuss_email
+  translation: "البريد الإلكتروني"
+
+- id: discuss_or
+  translation: "أو"
+
 # Override theme's Arabic plurals: number before the unit, and add the
 # missing `many` (11–99) form and the `words` key entirely.
 - id: read_time
