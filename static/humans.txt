@@ -1,5 +1,6 @@
 /* TEAM */
 Name: Zakaria Ybeggazene
+Also written: زكرياء إبڨازن / زكرياء إبقازن / إبڨازن / إبقازن / Ybeggazene / Ibeggazene / Ibeggazen / Ibegazen / Beggaz
 Role: Data scientist & AI engineer
 Contact: zakariaybeggazene [at] gmail.com
 LinkedIn: linkedin.com/in/zakaria-ybeggazene
@@ -7,7 +8,7 @@ GitHub: github.com/zakaria-ybeggazene
 X: twitter.com/zakaria_ygz
 
 /* SITE */
-Last update: 2026/06/18
+Last update: 2026/06/21
 Language: English / Français / العربية
 Standards: HTML5, CSS3
 Software: Hugo, PaperMod, Cloudflare Pages
