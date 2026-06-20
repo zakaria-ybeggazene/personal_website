@@ -48,7 +48,7 @@
   {{- range site.Params.socialIcons }}
     {{- if in (slice "linkedin" "github" "x" "twitter") .name }}{{ $socials = $socials | append .url }}{{ end }}
   {{- end }}
-  "sameAs": {{ $socials | jsonify }}
+  "sameAs": {{ $socials | jsonify | safeJS }}
 }
 </script>
 {{- end }}
